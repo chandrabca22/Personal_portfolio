@@ -13,11 +13,11 @@
             <nav>
                 <h1><span>P</span>ortfolio</h1>
                 <ul id="sidemenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact US</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact US</a></li>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
                 <i class="fas fa-bars" onclick="openmenu()"></i>
@@ -29,14 +29,14 @@
             </div>
         </div>
     </div>
-        <!-- ----------Header Section is Completed here----------- -->
+    <!-- ----------Header Section is Completed here----------- -->
         <div id="about">
             <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/cp.jpg" alt="">
-                </div>
-                <div class="about-col-2">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/cp.jpg" alt="">
+                    </div>
+                    <div class="about-col-2">
                     <h1 class="subtitle">About Me</h1>
                     <p>Hello !!! I am a second year undergraduate at the United Institute Of Management FUGS Naini Prayagraj, Uttar Pradesh in Bachelor of Computer Application. As a student of Computer Application, I am fascinated by the extensive impact computers can have in solving real world problems. I am specially interested in the field of web development and design, among other areas of computer Application and engineering
                         Among my other interests, I am fascinated to Making Youtube Videos as hobbies.</p>
@@ -62,10 +62,10 @@
                         <div class="tab-contents" id="education">
                             <ul>
                                 <li><span>July 2022 - July 2025</span><br>BCA ( UIM FUGS NAINI PRAYAGRAJ )</li>
-                            <li><span>April 2021 - April 2022</span><br>Intermediate ( MSDDIC BHADOHI )</li>
-                            <li><span>April 2019 - April 2020</span><br>Highschool  (MSDDIC BHADOHI )</li>
-                        </ul>
-                    </div>
+                                <li><span>April 2021 - April 2022</span><br>Intermediate ( MSDDIC BHADOHI )</li>
+                                <li><span>April 2019 - April 2020</span><br>Highschool  (MSDDIC BHADOHI )</li>
+                            </ul>
+                        </div>
                 </div>
             </div>
         </div>
@@ -159,7 +159,7 @@
             </div>
         </div>
         <!-- ----------Portfolio Section is Completed here----------- -->
-
+        
         <div id="contact">
             <div class="container">
                 <div class="row">
@@ -176,13 +176,14 @@
                         <a href="images/my-cv.pdf" download class="btn btn-cv">Download CV</a>
                     </div>
                     <div class="contact-right">
-                        <form action="">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                            <input type="number" name="number" placeholder="Your Number" required>
-                            <input type="email" name="email" placeholder="Your E-mail" required>
-                            <textarea name="message" rows="3" placeholder="Your Message" required></textarea>
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="number" name="Number" placeholder="Your Number" required>
+                            <input type="email" name="Email" placeholder="Your E-mail" required>
+                            <textarea name="Message" rows="3" placeholder="Your Message" required></textarea>
                             <button type="submit" class="btn btn-submit">Send Message</button>
                         </form>
+                        <span id="msg"></span>
                     </div>
                 </div>
             </div>
@@ -192,35 +193,6 @@
         </div>
         
         
-        
-        
-        
-        
-        
-        
-        <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemenu.style.right="0";
-        }
-        function closemenu(){
-            sidemenu.style.right="-200px";
-        }
-       </script>
+    <script src="script.js"></script>
 </body>
 </html>
